@@ -1,4 +1,12 @@
 import Image from 'next/image'
+import HeaderLeft from './components/header-left';
+import HeaderRight from './components/header-right';
+import HeaderWrap from './components/header-wrap';
+import Logo from './components/logo';
+import Item from './components/item';
+import Menu from './components/menu';
+import MenuLabel from './components/menu-label';
+import Social from './components/social';
 
 export default function Home() {
   return (
@@ -17,80 +25,27 @@ export default function Home() {
         height: 73,
       }}
     >
-      <div
-        id="header-wrap"
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          backgroundColor: "rgba(0, 0, 0, 0)",
-          paddingBottom: 0,
-          width: 1152,
-          height: 41,
-        }}
-      >
-        <div
-          id="header-left"
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            backgroundColor: 'rgba(0, 0, 0, 0)',
-            paddingBottom: 0,
-            width: 641,
-            height: 41,
-          }}
-        >
-          <div
-            id="menu"
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              backgroundColor: 'rgba(0, 0, 0, 0)',
-              paddingBottom: 0,
-              "width": 490,
-              "height": 20
-            }}
-          >
-            <span
-              id="menu-label"
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                backgroundColor: 'inherit',
-                paddingBottom: 0,
-                width: 47,
-                height: 20,
-              }}
-            >Тексты</span>
-            <span
-              id="menu-label"
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                backgroundColor: 'inherit',
-                paddingBottom: 0,
-                width: 59,
-                height: 20,
-              }}
-            >Митапы</span>
-          </div>
-        </div>
-        <div
-          id="header-right"
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            backgroundColor: 'rgba(0, 0, 0, 0)',
-            paddingBottom: 0,
-            width: 318,
-            height: 20
-          }}
-        >
-
-        </div>
-      </div>
+      <HeaderWrap>
+        <HeaderLeft>
+          <Logo>logo</Logo>
+          <Menu>
+            <Item>
+              <MenuLabel>Тексты</MenuLabel>
+              <MenuLabel>Митапы</MenuLabel>
+              <MenuLabel>Figma</MenuLabel>
+              <MenuLabel>Заметки</MenuLabel>
+              <MenuLabel>Дайджест</MenuLabel>
+              <MenuLabel>Поиск</MenuLabel>
+            </Item>
+          </Menu>
+        </HeaderLeft>
+        <HeaderRight>
+          <Social>youtube</Social>
+          <Social>vk</Social>
+          <Social>telegram</Social>
+          <Social>dropfile</Social>
+        </HeaderRight>
+      </HeaderWrap>
     </div>
   )
 }
