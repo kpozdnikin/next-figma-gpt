@@ -1,11 +1,12 @@
-import React from 'react';
+import styled from 'styled-components';
 
-const HeaderRight: React.FC = ({ children }) => {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'row', backgroundColor: 'rgba(0, 0, 0, 0)', paddingBottom: 0, width: 318, height: 20 }}>
-      { children }
-    </div>
-  );
-}
-
-export default HeaderRight;
+export const HeaderRight = styled.div`
+    width: 1152px;
+    height: 41px;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+`;

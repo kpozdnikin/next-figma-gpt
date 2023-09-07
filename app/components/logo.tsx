@@ -1,20 +1,8 @@
-import React from 'react';
+import styled from 'styled-components';
 
-const Logo = ({ children }) => {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        backgroundColor: 'rgba(0, 0, 0, 0)',
-        paddingBottom: 0,
-        width: 111,
-        height: 41,
-      }}
-    >
-      {children}
-    </div>
-  );
-};
-
-export default Logo;
+export const Logo = styled.div`
+    width: 111px;  // derived from the width in absoluteBoundingBox
+    height: 41px;  // derived from the height in absoluteBoundingBox
+    background-color: rgba(0, 0, 0, 0);  // derived from the backgroundColor in the JSON
+    position: relative;
+`;

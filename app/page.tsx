@@ -1,33 +1,13 @@
-import Image from 'next/image'
-import HeaderLeft from './components/header-left';
-import HeaderRight from './components/header-right';
-import HeaderWrap from './components/header-wrap';
-import Logo from './components/logo';
-import Item from './components/item';
-import Menu from './components/menu';
-import MenuLabel from './components/menu-label';
-import Social from './components/social';
+"use client"
+
+import { Header, HeaderWrap, HeaderLeft, HeaderRight, Logo, Menu, MenuLabel, Item } from './components';
 
 export default function Home() {
   return (
-    <div
-      id="header"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        backgroundColor: "rgba(0.04313725605607033, 0.07450980693101883, 0.1568627506494522, 1)",
-        paddingLeft: 24,
-        paddingRight: 24,
-        paddingTop: 16,
-        paddingBottom: 0,
-        width: 1200,
-        height: 73,
-      }}
-    >
+    <Header>
       <HeaderWrap>
         <HeaderLeft>
-          <Logo>logo</Logo>
+          <Logo />
           <Menu>
             <Item>
               <MenuLabel>Тексты</MenuLabel>
@@ -40,12 +20,9 @@ export default function Home() {
           </Menu>
         </HeaderLeft>
         <HeaderRight>
-          <Social>youtube</Social>
-          <Social>vk</Social>
-          <Social>telegram</Social>
-          <Social>dropfile</Social>
+
         </HeaderRight>
       </HeaderWrap>
-    </div>
+    </Header>
   )
 }

@@ -1,20 +1,12 @@
-import React from 'react';
+import styled from 'styled-components';
 
-const HeaderWrap: React.FC = ({ children }) => {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0)',
-        paddingBottom: 0,
-        width: 1152,
-        height: 41,
-      }}
-    >{children}</div>
-  );
-}
-
-export default HeaderWrap;
+export const HeaderWrap = styled.div`
+    width: 1152px;
+    height: 41px;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+`;

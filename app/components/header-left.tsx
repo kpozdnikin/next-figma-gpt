@@ -1,17 +1,11 @@
-import React from 'react';
+import styled from 'styled-components';
 
-const HeaderLeft: React.FC = ({ children }) => (
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      backgroundColor: 'rgba(0, 0, 0, 0)',
-      paddingBottom: 0,
-      width: 641,
-      height: 41,
-    }}
-  >{children}</div>
-);
-
-export default HeaderLeft;
+export const HeaderLeft = styled.div`
+  width: 641px;
+  height: 41px;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+`;
