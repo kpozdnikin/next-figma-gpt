@@ -1,21 +1,11 @@
-import React from 'react';
+import styled from 'styled-components';
 
-// TODO - add color!
-const Social = ({ children }) => {
-  return (
-    <span
-      style={{
-        display: 'flex',
-        color: "#ffff",
-        flexDirection: 'column',
-        backgroundColor: 'inherit',
-        paddingBottom: 0,
-        height: 20,
-      }}
-    >
-      {children}
-    </span>
-  );
-}
-
-export default Social;
+export const Social = styled.div`
+    width: 250px;  
+    height: 20px;  
+    position: relative;
+    display: flex;
+    align-items: center; // To vertically center the content
+    background-color: rgba(0, 0, 0, 0);
+    gap: 16px;
+`;

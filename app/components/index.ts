@@ -5,3 +5,6 @@ export * from './header-right';
 export * from './logo';
 export * from './menu';
 export * from './menu-item';
+export * from './social';
+export * from './social-item';
+export * from './vuesax';
